@@ -8,11 +8,8 @@
 INPUT=$(sed -n "${SLURM_ARRAY_TASK_ID}p" list1.txt)
 OUTPUT=$(sed -n "${SLURM_ARRAY_TASK_ID}p" list2.txt)
 
-PICARD=$EBROOTPICARD/picard.jar
-MARKDUPS="MarkDuplicates"
-
 module load picard java
 
 
 
-java -jar $PICARD $MARKDUPS INPUT=$INPUT OUTPUT=$OUTPUT\_dedup.bam METRICS_FILE=$INPUT\_DUP_metrics.txt VALIDATION_STRINGENCY=SILENT REMOVE_DUPLICATES=true
+java -jar $EBROOTPICARD/picard.jar MarkDuplicates INPUT=$INPUT OUTPUT=$OUTPUT\_dedup.bam METRICS_FILE=$INPUT\_DUP_metrics.txt VALIDATION_STRINGENCY=SILENT REMOVE_DUPLICATES=true
