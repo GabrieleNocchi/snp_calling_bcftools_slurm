@@ -1,7 +1,7 @@
 #!/bin/bash
-#SBATCH --time=2-00:00
+#SBATCH --time=1-10:00
 #SBATCH --cpus-per-task=1
-#SBATCH --mem-per-cpu=32G
+#SBATCH --mem-per-cpu=20G
 #SBATCH --account=def-yeaman
 #SBATCH --array=1-83
 
@@ -19,6 +19,6 @@ module load java gatk/3.8
 
 
 # Realign
-java -jar $EBROOTGATK/GenomeAnalysisTK.jar -T RealignerTargetCreator -R Betula_pendula_subsp._pendula.fa -I $INPUT -o $OUTPUT\_intervals
+java -jar $EBROOTGATK/GenomeAnalysisTK.jar -T RealignerTargetCreator -R Betula_pendula_subsp._pendula.fa -I $INPUT -o $OUTPUT\.intervals
 
-java -jar $EBROOTGATK/GenomeAnalysisTK.jar -T IndelRealigner -R Betula_pendula_subsp._pendula.fa -I $INPUT -targetIntervals $OUTPUT\_intervals --consensusDeterminationModel USE_READS  -o $OUTPUT\_realigned.bam
+java -jar $EBROOTGATK/GenomeAnalysisTK.jar -T IndelRealigner -R Betula_pendula_subsp._pendula.fa -I $INPUT -targetIntervals $OUTPUT\.intervals --consensusDeterminationModel USE_READS  -o $OUTPUT\_realigned.bam
