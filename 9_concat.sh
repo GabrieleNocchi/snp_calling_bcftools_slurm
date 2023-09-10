@@ -9,5 +9,5 @@
 module load bcftools
 
 
-bcftools concat -f list.txt -Oz > spruce_banff_2.vcf.gz
-tabix -p vcf spruce_banff_2.vcf.gz
+bcftools concat -f list.txt -Oz > spruce_banff.vcf.gz
+tabix -p vcf spruce_banff.vcf.gz
