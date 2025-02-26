@@ -6,11 +6,11 @@ Simply run the scripts one by one in their order.
 
 Files needed: 
 
-Paired end fastq files
+- Paired end fastq files
 
-Reference genome in FASTA format
+- Reference genome in FASTA format
 
-Genes gff file
+- Genes gff file
 
 NOTES:
 
