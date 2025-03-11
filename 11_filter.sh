@@ -14,7 +14,7 @@ module load StdEnv/2020 intel/2020.1.217 tabix/0.2.6
 ### Filter the final VCF produced in script 10 
 
 
-bcftools filter -e 'MQ < 30' bplaty.vcf.gz -Oz > tmp.vcf.gz
+bcftools filter -e 'AC=AN || MQ < 30' bplaty.vcf.gz -Oz > tmp.vcf.gz
 
 vcftools --gzvcf tmp.vcf.gz --max-missing 0.7 --minQ 30 --minGQ 20 --minDP 5 --max-alleles 2 --recode --recode-INFO-all --stdout > bplaty_filtered.vcf
 
