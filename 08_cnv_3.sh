@@ -3,6 +3,7 @@
 #SBATCH --cpus-per-task=1
 #SBATCH --mem-per-cpu=1G
 #SBATCH --account=def-yeaman
+
 ##### THIS IS NOT A ARRAY; THIS IS RUN ONCE PER DATASET
 ##### this script needs to be run in the same directory where the final realigned bam files (output of 07_realign_indel.sh) as well as the depth statistics files for each sample (output of 08_cnv_2.sh) are located
 ##### you need to create list.txt which is a list of the root names of all realigned bam files -- created with the first find/sed command below by removing the suffix .bam and the initial two characters "./" from the realigned bam files names
