@@ -12,7 +12,7 @@ Files needed:
 
 - Genes gff file
 
-NOTES:
+# NOTES:
 
 The resources requested for each script (CPUs, RAM and run time) should be changed according to your data: size of your raw fastq, size of reference etc. The resources provided here are an indication and probably an overkill for some steps.
 Indel realignment (script 07) needs a bit more RAM than the rest of the scripts.
