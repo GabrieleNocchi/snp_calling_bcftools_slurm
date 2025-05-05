@@ -1,4 +1,4 @@
-# SNP_calling_pipeline_slurm_mpilesup
+# SNP_calling_pipeline_bcftools_slurm
 
 
 This is a simple SNP calling pipeline, implemented for SLURM job scheduler.
