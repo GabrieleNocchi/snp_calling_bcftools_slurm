@@ -12,6 +12,24 @@ Files needed:
 
 - Genes gff file
 
+# Software versions:
+
+fastp v.0.20.1
+
+bwa-mem v.0.7.17-r1188
+
+samtools v.1.16.1
+
+Picard Tools v.2.26.3
+
+GATK v.3.8
+
+bcftools v. 1.16
+
+vcftools 0.1.16
+
+BEDtools v.2.27.1
+
 # NOTES:
 
 The resources requested for each script (CPUs, RAM and run time) should be changed according to your data: size of your raw fastq, size of reference etc. The resources provided here are an indication and probably an overkill for some steps.
